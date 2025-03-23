@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groups</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="groups.html">👥 Groups</a></li>
+                <li><a href="events.html">📅 Events</a></li>
+                <li><a href="#">🛠 Organizer Tools</a></li>
+                <li><a href="#">🏆 Leaderboard</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <h1>Groups</h1>
+            </header>
+            <section>
+                <h2>Manage Groups</h2>
+                <button onclick="showGroupForm('create')">Create Group</button>
+                
+                <button onclick="showGroups('view')">View Groups</button>
+                <button onclick="showGroups('delete')">Delete Group</button>
+            </section>
+
+            <!-- Group Form -->
+            <section id="groupFormSection" class="hidden">
+                <h2 id="formTitle">Create Group</h2>
+                <form id="groupForm">
+                    <label for="leaderName">Leader Name:</label>
+                    <input type="text" id="leaderName" required>
+
+                    <label for="leaderEmail">Leader Email:</label>
+                    <input type="email" id="leaderEmail" required>
+
+                    <label for="leaderPhone">Leader Phone No:</label>
+                    <input type="tel" id="leaderPhone" required>
+
+                    <label for="leaderBranch">Branch Name:</label>
+                    <input type="text" id="leaderBranch" required>
+
+                    <h3>Team Members</h3>
+                    <div id="membersContainer"></div>
+
+                    <button type="button" onclick="addMember()">➕ Add Member</button>
+                    <button type="submit" id="formSubmit">Create Group</button>
+                </form>
+            </section>
+
+            
+
+            <!-- Group List for Viewing & Deleting -->
+            <section id="groupListSection" class="hidden">
+                <h2>Available Groups</h2>
+                <ul id="groupList"></ul>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

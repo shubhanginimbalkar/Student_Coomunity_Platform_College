@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Flatmates</title>
+    <link rel="stylesheet" href="style2.css">
+    <script defer src="flatmate.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Find Flatmates</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="flats.html">Flats</a>
+                <a href="flatmates.html">Flatmates</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flatmate-main">
+        <section class="flats-section">
+            <h2>Flats</h2>
+            <button onclick="showAddFlatForm()">Add Flat</button>
+            <div id="flat-form" style="display: none; text-align: left;">
+                <label for="location">Location:</label>
+                <input type="text" id="location" placeholder="Enter Location" required><br>
+                
+                <label for="rent">Rent:</label>
+                <input type="number" id="rent" placeholder="Enter Rent" required><br>
+                
+                <label for="facilities">Facilities:</label>
+                <input type="text" id="facilities" placeholder="Enter Facilities" required><br>
+                
+                <label for="flatmates">No. of Flatmates:</label>
+                <input type="number" id="flatmates" placeholder="Enter Number of Flatmates" required><br>
+                
+                <label for="contact">Contact (10-digit number):</label>
+                <input type="text" id="contact" placeholder="Enter Contact Number" pattern="\d{10}" required><br>
+                
+                <button onclick="addFlat()">Submit</button>
+            </div>
+            <div id="flat-list">
+                <!-- Flats will be dynamically added here -->
+            </div>
+        </section>
+        
+        <section class="flatmates-section">
+            <h2>View Flats Available</h2>
+            <div id="available-flats">
+                <!-- Available flats will be dynamically displayed here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Find Flatmates Portal</p>
+    </footer>
+</body>
+</html>

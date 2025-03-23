@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Avatar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Chatbot Widget -->
+    <div class="chat-widget" id="chat-widget">
+        <div class="chat-header" onclick="toggleChat()">
+            <img src="bot.png" alt="Bot Avatar" class="chat-avatar">
+            <span>Chat with us</span>
+            <button class="minimize-btn" onclick="minimizeChat(event)">-</button>
+        </div>
+        <div class="chat-container" id="chat-container" style="display: none;">
+            <div class="chat-box" id="chat-box"></div>
+            <input type="text" id="user-input" class="chat-input" placeholder="Type a message...">
+            <button onclick="sendMessage()" class="send-btn">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f7fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+}
+
+/* Slim & Space-Efficient Header */
+header {
+    background: linear-gradient(to right, #89b8f4, #678ac8);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.4em;
+    font-weight: bold;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    width: 220px;
+    background: #2c3e50;
+    color: white;
+    position: fixed;
+    top: 50px;  /* Below header */
+    left: 0;
+    height: calc(100% - 50px);
+    padding-top: 10px;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-list li {
+    padding: 12px 20px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    display: block;
+}
+
+.nav-list a:hover {
+    background: #1a252f;
+    border-radius: 5px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    list-style: none;
+    padding-left: 15px;
+    display: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Main Content */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 900px;
+    margin: 70px auto 20px 250px;
+    padding: 20px;
+}
+
+/* Content Grid - Two Column Layout */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Sections */
+.box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styling */
+form input, form button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background: #89b8f4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+form button:hover {
+    background: #78a4d9;
+}
+
+/* Event List */
+.event-container {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#eventList, #upcomingEventList {
+    list-style: none;
+    padding: 0;
+}
+
+#eventList li, #upcomingEventList li {
+    background: #e0f1ff;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    width: calc(100% - 250px);
+    bottom: 0;
+    left: 250px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 180px;
+    }
+
+    .container {
+        margin-left: 190px;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        width: calc(100% - 180px);
+        left: 180px;
+    }
+}

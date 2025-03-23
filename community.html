@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="mainHeader">
+        <h1>Community Platform</h1>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <ul class="nav-list">
+            <li><a href="#createManageEvent">Create & Manage Events</a></li>
+            <li class="dropdown">
+                <a href="#">View Events ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#viewEvents">Ongoing & Upcoming Events</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="content-grid">
+            <!-- Create & Manage Event Section -->
+            <section id="createManageEvent" class="box">
+                <h2>Create & Manage Events</h2>
+                <form id="eventForm">
+                    <input type="text" id="eventName" placeholder="Event Name" required>
+                    <input type="datetime-local" id="eventDateTime" required>
+                    <input type="text" id="eventLocation" placeholder="Event Location" required>
+                    <input type="number" id="registrationFee" placeholder="Registration Fee (USD)" required>
+                    <button type="submit">Create Event</button>
+                </form>
+                <h3>Manage Events</h3>
+                <ul id="eventList">
+                    <li>No events created yet.</li>
+                </ul>
+            </section>
+
+            <!-- View Events Section -->
+            <section id="viewEvents" class="box">
+                <h2>Ongoing & Upcoming Events</h2>
+                <div class="event-container">
+                    <ul id="upcomingEventList">
+                        <li>No upcoming events.</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Community Platform. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
